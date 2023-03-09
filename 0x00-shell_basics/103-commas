@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1 -v -a | awk '{printf("%s%s",sep,$0); sep=","} END{print""}'
+ls -ap1 | sort -d | sed -e 's/$/,/' -e 's/^\.\{1,2\}\/*/&\n/g' | tr -d '\n'
