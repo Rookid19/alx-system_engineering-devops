@@ -1,3 +1,2 @@
 #!/bin/bash
 ls -1 -v -a | awk '{printf("%s%s",sep,$0); sep=","} END{print""}'
-
